@@ -1,0 +1,9 @@
+ spring:
+  cloud:
+    config:
+      name: spring-cloud-config            #对应spring-cloud-config-dev.yml的{spring-cloud-config}部分
+      profile: dev                         #对应spring-cloud-config-dev.yml的{dev}部分
+      uri: http://localhost:8001/          #配置中心的具体地址
+      label: master                        #对应git的分支。如果配置中心使用的是本地存储，则该参数无用
+     #spring.cloud.config.discovery.enabled=true               #true是从配置中心读取文件
+     #spring.cloud.config.discovery.service-id=xxx             #指定配置中心的service-id，便于扩展为高可用配置集群(目前未启用)
